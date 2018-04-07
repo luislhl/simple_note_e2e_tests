@@ -1,0 +1,9 @@
+{
+  "data": {
+    "addNote": {
+      "id": "ccadccd4-1d90-4b63-b2e9-c374cbd1f4e7",
+      "content": "Escreva sua nota",
+      "__typename": "NoteType"
+    }
+  }
+}
