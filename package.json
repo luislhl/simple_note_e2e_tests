@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "yarn cypress run"
+    "test": "node test.js"
   },
   "author": "",
   "license": "ISC",

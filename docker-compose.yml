@@ -1,0 +1,10 @@
+frontend:
+  build: 'https://luislhl:10430324dbfe961f9539fbaeb8662723f69caf34@github.com/luislhl/desafio_vtex_front.git#dockerize'
+  ports:
+    - "3000:3000"
+tests:
+  build: .
+  links:
+    - frontend
+  environment:
+    FRONTEND_URL: 'http://frontend:3000'
