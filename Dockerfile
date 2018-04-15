@@ -2,6 +2,6 @@ FROM cypress/base:8
 
 COPY . .
 
-RUN yarn install --force
+RUN yarn install
 
-CMD yarn test
+CMD yarn test-docker

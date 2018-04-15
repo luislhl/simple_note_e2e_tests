@@ -23,11 +23,3 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-
-Cypress.Commands.add('visitStub', function(url, options = {}) {
-  cy.visit(url, Object.assign(options, {
-    onBeforeLoad: win => {
-      win.fetch = null;
-    },
-  }))
-});
