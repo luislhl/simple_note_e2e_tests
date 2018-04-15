@@ -5,8 +5,7 @@ services:
     ports:
       - "8000:8000"
   backend:
-    # build: 'https://luislhl:10430324dbfe961f9539fbaeb8662723f69caf34@github.com/luislhl/desafio_vtex_back.git#dockerize'
-    build: '../back-end'
+    image: luislhl/simplenote-backend
     ports:
       - "4000:4000"
     links:
@@ -18,8 +17,7 @@ services:
       AWS_ACCESS_KEY_ID: 'FakeAccessKeyId'
       AWS_SECRET_ACCESS_KEY: 'FakeSecretAccessKey'
   frontend:
-    # build: 'https://luislhl:10430324dbfe961f9539fbaeb8662723f69caf34@github.com/luislhl/desafio_vtex_front.git#dockerize'
-    build: '../front-end'
+    image: luislhl/simplenote-frontend
     ports:
       - "3000:3000"
     links:
