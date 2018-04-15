@@ -14,7 +14,7 @@ services:
     environment:
       DYNAMODB_REGION: 'us-east-1'
       DYNAMODB_ADDRESS: 'http://dynamodb:8000'
-      DYNAMODB_NOTES_TABLE: 'Notes'
+      DYNAMODB_NOTES_TABLE: 'Notes-Test'
       AWS_ACCESS_KEY_ID: 'FakeAccessKeyId'
       AWS_SECRET_ACCESS_KEY: 'FakeSecretAccessKey'
   frontend:
@@ -35,6 +35,6 @@ services:
       FRONTEND_URL: 'http://frontend:3000'
       DYNAMODB_REGION: 'us-east-1'
       DYNAMODB_ADDRESS: 'http://dynamodb:8000'
-      DYNAMODB_NOTES_TABLE: 'Notes'
+      DYNAMODB_NOTES_TABLE: 'Notes-Test'
       AWS_ACCESS_KEY_ID: 'FakeAccessKeyId'
       AWS_SECRET_ACCESS_KEY: 'FakeSecretAccessKey'

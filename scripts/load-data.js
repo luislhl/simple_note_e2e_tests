@@ -27,7 +27,7 @@ var allNotes = [{
 
 allNotes.forEach(function(note) {
 	var params = {
-  TableName : process.env.DYNAMODB_NOTES_TABLE || 'Notes',
+  TableName : process.env.DYNAMODB_NOTES_TABLE || 'Notes-Test',
 		Item: {
 			"id":  note.id,
 			"content": note.content,
