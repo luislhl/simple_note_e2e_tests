@@ -9,9 +9,14 @@ jobs:
           ## this enables colors in the output
           TERM: xterm
     working_directory: ~/app
-    parallelism: 1
     steps:
       - checkout
+
+      - run:
+          name: Install Docker
+          command: |
+            curl -fsSL get.docker.com -o get-docker.sh
+            sh get-docker.sh
 
       - run:
           name: Install Docker Compose
