@@ -38,3 +38,17 @@ jobs:
             - node_modules
       - run: docker-compose build
       - run: docker-compose run tests
+
+      # build and publish docker image
+      - run: |
+          TAG=$CIRCLE_BUILD_NUM
+          docker build -t luislhl/simplenote-e2e-tests:$TAG .
+
+          echo $DOCKER_PASS > ~/docker_pass.txt
+          cat ~/docker_pass.txt | docker login -u $DOCKER_USER --password-stdin
+
+          docker push luislhl/simplenote-e2e-tests:$TAG
+          if [ "$CIRCLE_BRANCH" == "master" ]; then
+            docker tag luislhl/simplenote-e2e-tests:$TAG luislhl/simplenote-e2e-tests:latest
+            docker push luislhl/simplenote-e2e-tests:latest
+          fi
