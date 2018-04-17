@@ -23,3 +23,15 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+import databaseUtils from '../support/database';
+
+Cypress.Commands.add("resetDatabase", () => {
+  console.log('Will reset database');
+  return databaseUtils.resetDatabase();
+});
+
+Cypress.Commands.add("feedNotesTable", (notes) => {
+  console.log('Will feed notes');
+  return databaseUtils.feedNotes(notes);
+});

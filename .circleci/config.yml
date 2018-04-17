@@ -37,6 +37,7 @@ jobs:
           paths:
             - node_modules
       - run: docker-compose build
+      - run: docker-compose up -d dynamodb backend frontend
       - run: docker-compose run tests
 
       # build and publish docker image

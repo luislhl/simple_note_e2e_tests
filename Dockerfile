@@ -4,4 +4,4 @@ COPY . .
 
 RUN yarn install
 
-CMD yarn test-docker
+CMD yarn test

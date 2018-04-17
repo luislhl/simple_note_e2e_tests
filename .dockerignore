@@ -1,0 +1,11 @@
+.DS_Store
+.git
+.gitignore
+.github
+.npm
+node_modules
+*.orig
+*.log
+readme.*
+.vscode
+.editorconfig

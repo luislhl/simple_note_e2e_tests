@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "configure-db": "node scripts/create-table.js && node scripts/load-data.js",
-    "test-docker": "yarn configure-db && yarn test",
     "test": "node scripts/test.js"
   },
   "author": "",
