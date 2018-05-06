@@ -1,6 +1,6 @@
 # Simple Note E2E Tests 
 
-This repo keeps e2e tests between the [Backend](https://github.com/luislhl/desafio_vtex_back) and [Frontend](https://github.com/luislhl/desafio_vtex_front) of the Simplenote App.
+This repo keeps e2e tests between the [Backend](https://github.com/luislhl/simple_note_backend) and [Frontend](https://github.com/luislhl/simple_note_frontend) of the Simplenote App.
 
 The tests run against docker images of both the frontend and backend projects, to assure that changes made to one project do not break the contract between them. 
 
